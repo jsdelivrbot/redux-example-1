@@ -36,9 +36,9 @@ function mapStateToProps(state) {
   }
 }
 
-// 실제 실행할 액션생성자 함수를 this.props로 사용할수 있도록하고 bindActionCreator가 리듀서로 보내지도록 설정하는 부분 
+// 실제 실행할 액션생성자 함수를 this.props로 사용할수 있도록하고 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({selectBook : selectBook}, dispatch);
+  return bindActionCreators({selectBook : selectBook}, dispatch); //bindActionCreator가 리듀서로 보내지도록 역할을 함. 
 }
 // connect가 컴포넌트를 컨테이너로 만들어주는 함수 이다. 
 export default connect(mapStateToProps, mapDispatchToProps)(BookList);
